@@ -1,0 +1,167 @@
+<apex:page Controller="Site_Proposal_Controller" title="SiteProposal.pdf" renderAs="pdf">
+   
+    <html>
+      <body>
+          <apex:image url="{!$Resource.CELogo}" style="width:100px; height:30px;"/>
+          <h4 style="text-align: center; margin: 0 auto;">Site Proposal</h4>       
+      <hr/>
+          <br/>
+         <table style="margin: 0 auto;" border="1">
+            <tr>
+               <th style="font-size: 16px;text-align: center;">OPCO ID</th>
+               <th style="font-size: 16px;text-align: center;">Customer</th>
+               <th style="font-size: 16px;text-align: center;">ETIPL ID</th>
+               <th style="font-size: 16px;text-align: center;">Site Name</th>
+                <th style="font-size: 16px;text-align: center;">SP Date</th>
+                 <th style="font-size: 16px;text-align: center;">Site Address</th>
+
+            </tr>
+            <apex:repeat value="{!subsD}" var="sp" >
+                <tr>
+                  <td style="font-size: 14px;">{!sp.OPCO_ID_from_Site__c}</td>
+                  <td style="font-size: 14px;">{!sp.Customer__r.Name}</td>
+                  <td style="font-size: 14px;">{!sp.ETIPL_ID__c}</td>
+                  <td style="font-size: 14px;">{!sp.Site_Name__r.Name}</td>
+                  <td style="font-size: 14px;">{!DAY(TODAY())}/{!MONTH(TODAY())}/{!YEAR(TODAY())}</td>
+                  <td style="font-size: 14px;">{!sp.Candidate_Address__c}</td>
+               </tr>
+            </apex:repeat>
+         </table>
+          
+         <br/>
+              <h4 style="text-align: center; margin: 0 auto;">Site Details</h4> 
+               
+          <br/>
+        <table style="margin: 0 auto;" border="1">
+            <tr>
+               <th style="font-size: 16px;text-align: center;">Building Height</th>
+                <th style="font-size: 16px;text-align: center;">AGL</th>
+               <th style="font-size: 16px;text-align: center;">BTS Type</th>
+               <th style="font-size: 16px;text-align: center;">Technology Planned</th>
+               <th style="font-size: 16px;text-align: center;">Number of Existing Tenants</th>
+               <th style="font-size: 16px;text-align: center;">FAR End Site ID</th>
+                <th style="font-size: 16px;text-align: center;">FAR End Site Name</th>
+                 <th style="font-size: 16px;text-align: center;">Post Office</th>
+<th style="font-size: 16px;text-align: center;">Police Station</th>
+<th style="font-size: 16px;text-align: center;">Latitude</th>
+<th style="font-size: 16px;text-align: center;">Longitude</th>
+            </tr>
+            <apex:repeat value="{!subsD}" var="sp" >
+                <tr>
+                    <td style="font-size: 14px;">{!sp.Building_Height__c}</td>
+                    <td style="font-size: 14px;">{!sp.AGL__c}</td>
+                  <td style="font-size: 14px;">{!sp.BTS_types__c}</td>
+                  <td style="font-size: 14px;">{!sp.Technology_Planned__c}</td>
+                  <td style="font-size: 14px;">0</td>
+                  <td style="font-size: 14px;">{!sp.FAR_End_ID__c}</td>
+                  <td style="font-size: 14px;">{!sp.FAR_End_Site_Name__c}</td>
+                  <td style="font-size: 14px;">{!sp.Post_Office__c}</td>
+                  <td style="font-size: 14px;">{!sp.Police_Station__c}</td>
+                  <td style="font-size: 14px;">{!sp.Actual_Latitude__c}</td>
+                  <td style="font-size: 14px;">{!sp.Actual_Longitude__c}</td>
+               </tr>
+            </apex:repeat>
+         </table>
+         <br/>
+         <h4 style="text-align: center; margin: 0 auto;">Monthly Pricing Plan</h4> 
+
+          <br/>  
+        <table style="margin: 0 auto;" border="1">
+            <tr>
+               <th>Particulars</th>
+               <th>Quantity</th>
+               <th>Price(in INR)</th>
+            </tr>
+            <apex:repeat value="{!subsD}" var="sp" >
+                <tr>
+                  <td>Basic IP Fee</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center;"><strong>{!sp.Basic_IP_Fee_from_MSA__c}</strong></td>
+               </tr>
+                <tr>
+                  <td>Base Fiber Price</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center;"><strong>{!sp.Fiber_Price__c}</strong></td>
+               </tr>
+                <tr>
+                  <td>Base Sectors</td>
+                  <td style="text-align: center;">{!sp.Base_Sector__c}</td>
+                   <td style="text-align: center;">0</td>
+               </tr>
+                <tr>
+                  <td>Additional Sectors</td>
+                  <td style="text-align: center;">{!sp.Additional_Sector_Count__c}</td>
+                   <td style="text-align: center;"><strong>{!sp.Additional_Sector_Price__c}</strong></td>
+               </tr>
+               <tr>
+                  <td>Base LMC (Meter)</td>
+                  <td style="text-align: center;">{!sp.Base_LMC_in_Mtrs_MSA_Plan__c}</td>
+                   <td style="text-align: center;">0</td>
+               </tr>
+               <tr>
+                  <td>Additional LMC (Meter)</td>
+                  <td style="text-align: center;">{!sp.Additional_LMC_in_Meter__c}</td>
+                   <td style="text-align: center;"><strong>{!sp.Additional_LMC_Price__c}</strong></td>
+               </tr>
+                <tr>
+                  <td>Power Backup Hrs</td>
+                  <td style="text-align: center;">{!sp.Power_Backups__c}</td>
+                   <td style="text-align: center;"><strong>{!sp.Power_Backup_Price__c}</strong></td>
+               </tr>
+                      
+                <tr>
+                  <td>Camouflage</td>
+                  <td style="text-align: center;">{!sp.Camouflage_Needed__c}</td>
+                   <td style="text-align: center;"><strong>{!sp.Camouflage_Price__c}</strong></td>
+               </tr>
+
+               <tr>
+                  <td>Equipment Watts Plan</td>
+                   <td style="text-align: center;">{!sp.Equipment_Watts__c}</td>
+                  <td style="text-align: center;"><strong>{!sp.Equipment_Watts_Price__c}</strong></td>
+               </tr>
+ 
+                <tr>
+                  <td>Additional 3 Meter Pole</td>
+                  <td style="text-align: center;">{!sp.X3_Meter_Pole_Count__c}</td>
+                   <td style="text-align: center;">-</td> 
+               </tr>
+                <tr>
+                  <td>Additional 6 Meter Pole</td>
+                  <td style="text-align: center;">{!sp.X6_Meter_Pole_Count__c}</td>
+                   <td style="text-align: center;">-</td>
+               </tr>
+                <tr>
+                  <td>Additional 9 Meter Pole</td>
+                  <td style="text-align: center;">{!sp.X9_Meter_Pole_Count__c}</td>
+                  <td style="text-align: center;">-</td>
+               </tr>
+                <tr>
+                  <td>Additional Pole Price</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center;"><strong>{!sp.Additional_Pole_Length_Price__c}</strong></td>
+               </tr>
+               <tr>
+                  <td>Site Rent Per Month</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center;"><strong>{!sp.Rent_Per_Month__c}</strong></td>
+               </tr>
+                <tr>
+                  <td>Total Charge Per Monthly (IP+Rent)</td>
+                  <td style="text-align: center;">-</td>
+                  <td style="text-align: center;"><strong>{!sp.Total_Price_per_Month_based_on_MSA__c}</strong></td>
+               </tr>
+                <tr>
+                  <td>EB Charges (Approx*)</td>
+                   <td style="text-align: center;">-</td>
+                  <td style="text-align: center;"><strong>{!sp.EB_Charge_As_per_the_MSA_Plan__c}</strong></td>
+               </tr>
+
+                               
+            </apex:repeat>
+         </table>
+         <br/>
+         <p style="text-align: right;"><b>Regional Sales Head,CloudExtel</b></p>
+      </body>
+   </html>
+</apex:page>

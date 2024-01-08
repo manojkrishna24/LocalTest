@@ -1,0 +1,20 @@
+<apex:page controller="MRF_Pdf" renderAs="PDF">
+    <apex:pageBlock >
+         <apex:pageBlockTable value="{!MaterialRequest }" var="result">
+            <apex:column value="{!result.Project__c }"/>
+            <apex:column value="{!result.Status__c }"/>
+            <apex:column value="{!result.Name }"/>
+             <apex:column value="{!result.Warehouse__c }"/>
+             <apex:column value="{!result.Account__c }"/>
+        </apex:pageBlockTable>
+    </apex:pageBlock>
+    
+    <apex:pageBlock >
+         <apex:pageBlockTable value="{!MaterialRequestItem }" var="resitem">
+            <apex:column value="{!resitem.Item__c }"/>
+            <apex:column value="{!resitem.Quantity__c }"/>
+            <apex:column value="{!resitem.Price__c}"/>
+             <apex:column value="{!resitem.MaterialRequest__c}"/>
+            </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,59 @@
+<apex:page controller="SmallCellQualityCertController" showHeader="false" applyBodyTag="false" renderAs="pdf">
+    <head>
+        <style>
+            body { font-family: 'Calibri', sans-serif; font-size: 11px;}
+        </style>
+    </head>
+    <body>
+        <div style="padding: 20px 20px 20px 20px">
+            <div style="text-align: right">
+                <apex:image url="{!$Resource.cloud_extel_logo}" width="297" height="104"/>
+            </div>
+            <div>
+                <p style="text-align: center; font-size: 16px; font-weight: bold; text-decoration: underline;">Site Quality Certificate</p>
+                <p>
+                    This is to Certify that Airtel Site ID :- {!stProject.sitetracker__Site__r.UID__c} ETIPL/Netfra Site ID :- {!stProject.ETIPL_IT__c} is being declared RFI today dated {!todayDate}
+                    <br/><br/><br/>This Site is visited during complete site build Tenure by ETIPL/Netfra Site Engineer &amp; Audited by Circle Quality SPOC.
+                    <br/><br/><br/>Following are the Gate wise checklist filled at the time of constructions. All Checklist are enclosed herewith during RFI
+                    declaration to Airtel Circle Team for HOTO.
+                    <ol>
+                        <li>RTP Material Checklist</li>
+                        <li>Civil Work &amp; Pole Erection Checklist</li>
+                        <li>Electrical, Earthing &amp; Power Backup Checklist</li>
+                        <li>Photographs
+                            <ul style="list-style-type: circle">
+                                <li>EB Meter and Power Tapping</li>
+                                <li>Power Cable routing</li>
+                                <li>Earthing and Routing</li>
+                                <li>Bus Bar</li>
+                                <li>SMPS</li>
+                                <li>Battery &amp; Cabinet</li>
+                                <li>Pole and Pole Mount material</li>
+                                <li>Hygiene and HSW</li>
+                            </ul>
+                        </li>
+                    </ol>
+                    <br/>{!siteDesignedBy}
+                    <br/><br/><br/>We Certify that Site is build as per Design and all Material used is as per specified standards as mentioned in Design/Drawing.
+                </p>
+            </div>
+            <div style="padding-top: 20px">
+            <div style="display: table-row; line-height: 0.5">
+                <div style="display: table-cell;">
+                    Circle Quality and Operations Head
+                    <br/>Digital Sign
+                </div>
+                <div style="display: table-cell; padding-left: 50px">
+                    Regional Head
+                    <br/>Digital Sign
+                </div>
+                <div style="display: table-cell; padding-left: 50px">
+                    National Quality Head
+                    <br/>Digital Sign
+                </div>
+            </div>
+            </div>
+        </div>
+    </body>
+
+</apex:page>

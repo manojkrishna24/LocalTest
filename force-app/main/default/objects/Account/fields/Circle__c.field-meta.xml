@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Circle__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>This field is used to capture the circle that the account is associated with.</description>
+    <externalId>false</externalId>
+    <label>Circle</label>
+    <referenceTo>Circles__c</referenceTo>
+    <relationshipLabel>Accounts</relationshipLabel>
+    <relationshipName>Accounts</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Lookup</type>
+</CustomField>

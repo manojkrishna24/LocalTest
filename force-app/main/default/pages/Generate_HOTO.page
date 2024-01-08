@@ -1,0 +1,90 @@
+<apex:page standardController="sitetracker__Project__c" extensions="HOTOFormController" renderAs="pdf">
+    
+    <body>
+        <table style="width: 100%;">
+            <tr >
+                <td colspan="2" style="font-size: 25px; font-weight: bold; color: red; text-align: left; padding-bottom: 10px; line-height: 0.6;">
+                    EXCEL TELESONIC INDIA PVT LTD.<br/>
+                    <span style="font-size: 10px; font-weight: bold; color: red;">CIN NO. : U74999MH2010PTC207323</span>
+                </td>
+                
+                <td style="text-align: right;padding-bottom: 10px;">
+                    <!-- Include your logo here -->
+                    <img src="{!$Resource.HOTO_logo}" alt="Your Logo"/>
+                </td>
+            </tr>
+        </table>
+        
+        
+        
+        <!-- Mini Table 1 -->
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 0px; margin-top: 0px;">
+            <tr>
+                <th colspan="2" style="text-align: center; border: 1px solid black; padding: 15px; background-color:#F7DB73">Site Handover Sign-off- Checklist (Required for Invoicing)</th>
+            </tr>
+            <tr>
+                <th colspan="2" style="text-align: center; border: 1px solid black; padding: 10px;">HOTO CUM CONSUMPTION REPORT</th>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-right: none; border-top: 1px; text-align: left; padding: 10px;">Location (RSU): {!relatedSite.Name}</td>
+                <td style="border: 1px solid black; border-left: none; text-align: left; padding: 10px;">Partner Name: {!currentProject.Vendor_LMC__r.Name}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-right: none; border-top: 1px; text-align: left; padding: 10px;">Consumption Period:{!MONTH(FTTHMDU.Project_Start_F__c)}/{!DAY(FTTHMDU.Project_Start_F__c)}/{!YEAR(FTTHMDU.Project_Start_F__c)} to  {!MONTH(relatedSite.RFS__c)}/{!DAY(relatedSite.RFS__c)}/{!YEAR(relatedSite.RFS__c)}</td>
+                <td style="border: 1px solid black; border-left: none; text-align: left; padding: 10px;">Date: {!MONTH(TODAY())}/{!DAY(TODAY())}/{!YEAR(TODAY())}</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-right: none; border-top: 1px; text-align: left; padding: 10px;">ACTIVITY TYPE: OFC Activities /FTTH</td>
+                <td style="border: 1px solid black; border-left: none; text-align: left; padding: 10px;">Zone: Bangalore</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-right: none; border-top: 1px; text-align: left; padding: 10px;">WO Detail: {!FTTHMDU.WO_PO_Number__c}</td>
+                <td style="border: 1px solid black; border-left: none; text-align: left; padding: 10px;">ODF No:: {!ODF_name}</td>
+            </tr>
+        </table>
+        
+        
+        <!-- Table with Bombos -->
+        <!-- Table with Bombos -->
+        <table style="border-collapse: collapse; width: 100%; border: 1px solid black; margin-bottom: 0px; table-layout: fixed; text-align: center;">
+            <tr style="border-bottom: 1px solid black; background-color: #BBDEEC;">
+                <th style="border: 1px solid black;">Sl No</th>
+                <th style="border: 1px solid black;">Item</th>
+                <th style="border: 1px solid black;">UoM</th>
+                <th style="border: 1px solid black;">Planned Quantity</th>
+                <th style="border: 1px solid black;">Executed Quantity(till Previous invoice)</th>
+                <th style="border: 1px solid black;">Current Executed (Quantity)</th>
+                <!-- Add more fields as needed -->
+            </tr>
+            <apex:repeat value="{!relatedBombos}" var="bombo">
+                <tr>
+                    <td style="border: 1px solid black;">{!bombo.Serial_Number__c}</td>
+                    <td style="border: 1px solid black;">{!bombo.sitetracker__Item__r.Name}</td>
+                    <td style="border: 1px solid black;">{!bombo.sitetracker__Item__r.sitetracker__Primary_UoM__c}</td>
+                    <td style="border: 1px solid black;">{!bombo.sitetracker__Quantity__c}</td>
+                    <td style="border: 1px solid black;">-</td>
+                    <td style="border: 1px solid black;">{!bombo.Consumed_Qty__c}</td>
+                    <!-- Add more fields as needed -->
+                </tr>
+            </apex:repeat>
+        </table>
+        
+        
+        <!-- Signature Row -->
+        <table style="width: 100%; border-collapse: collapse; margin-bottom: 0px; margin-top: 0px">
+            <tr>
+                <td style="border: 1px solid black; border-right: none; border-top: 1px solid black; text-align: left; padding: 10px;">AT Engineer Signature:</td>
+                <td style="border: 1px solid black; border-left: none; text-align: left; padding: 10px;">Deployment Engineer:</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-right: none; border-top: 1px; text-align: left; padding: 10px;">Date:</td>
+                <td style="border: 1px solid black; border-left: none; text-align: left; padding: 10px;">Date:</td>
+            </tr>
+            <tr>
+                <td style="border: 1px solid black; border-right: none; border-top: 1px; text-align: left; padding: 10px;">BG Engineer Signature::</td>
+                <td style="border: 1px solid black; border-left: none; text-align: left; padding: 10px;">Date:</td>
+            </tr>
+        </table>
+    </body>
+    
+</apex:page>

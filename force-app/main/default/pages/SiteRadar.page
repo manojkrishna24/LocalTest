@@ -1,0 +1,176 @@
+<apex:page standardController="sitetracker__Site__c" extensions="GetSitesForRadar">
+   <html>
+      <head>
+         <!-- Include Leaflet library for OpenStreetMap -->
+         <apex:stylesheet value="https://unpkg.com/leaflet/dist/leaflet.css" />
+         <apex:includeScript value="https://unpkg.com/leaflet/dist/leaflet.js" />
+      </head>
+      <body>
+         <div id="map" style="height: 500px;"></div>
+         <script>
+            var sitejs = '{!sitejson}';
+            var jsonObject = JSON.parse(sitejs);
+            var optionjs = '{!optionjson}';
+          
+            var optjsonObject = JSON.parse(optionjs);
+       
+            var centerLat = {!sitetracker__Site__c.sitetracker__Lat__c};
+            var centerLon = {!sitetracker__Site__c.sitetracker__Long__c};
+            var centerPoint = L.latLng(centerLat, centerLon);
+
+            // Initialize the map
+            var map = L.map('map').setView(centerPoint, 15);
+
+            // Add OpenStreetMap layer
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+               attribution: '© OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Add a marker for the center point with a custom icon
+            L.marker(centerPoint, {
+                icon: L.icon({
+                    iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-blue.png', // Provide the URL for the custom icon
+                    iconSize: [25, 41],
+                    iconAnchor: [12, 41],
+                    popupAnchor: [1, -34],
+                    tooltipAnchor: [16, -28],
+                    shadowSize: [41, 41]
+                })
+            }).addTo(map);
+
+            for (var i = 0; i <= 1000; i += 200) {
+                L.circle(centerPoint, {
+                    color: '#0FC21A',
+                    fillColor: '#0A4B0E',
+                    fillOpacity: 0.4,
+                    radius: i
+                }).addTo(map);
+                if (i != 0) {
+                    var labelLatLng = L.latLng(centerLat, centerLon + (i / 111300)); // Approximate 1 degree latitude = 111,300 meters
+                    L.marker(labelLatLng, {
+                        icon: L.divIcon({
+                            className: 'circle-label',
+                            html: i + ' mtrs',
+                            iconSize: [20, 10],
+                            iconAnchor: [25, 0]
+                        })
+                    }).addTo(map);
+                }
+            }
+
+            // Add a line to represent the scanning line
+            var scanningLine = L.polyline([centerPoint, centerPoint], { color: '#05F90D',weight: 2  }).addTo(map);
+
+            // Animate the scanning line
+            var radius = 215; // dius in meters
+            var animationSpeed = 1000; // Set the animation speed in milliseconds
+            var totalSteps = 1000; // Set the total animation steps
+
+            function animateScanningLine() {
+                var step = 0;
+
+                function animate() {
+                    if (step <= totalSteps) {
+                        var angle = (step / totalSteps) * 360;
+                        var endpoint = map.project(centerPoint).add(L.point(Math.cos(angle * (Math.PI / 180)) * radius, Math.sin(angle * (Math.PI / 180)) * radius));
+                        scanningLine.setLatLngs([centerPoint, map.unproject(endpoint)]);
+                        step++;
+                        setTimeout(animate, animationSpeed / totalSteps);
+                    } else {
+                        // Scanning line completed one circle, start marking sites
+                        markSitesOneByOne();
+                    }
+                }
+
+                animate();
+            }
+
+            // Call the animateScanningLine function
+            animateScanningLine();
+
+            // Function to mark sites one by one with a time interval
+            function markSitesOneByOne() 
+          {
+                var siteIndex = 0;
+
+                function markSite() 
+                {
+                    if (siteIndex < jsonObject.length) 
+                    {
+                        var site = jsonObject[siteIndex];
+                        var siteLatLng = L.latLng(site.sitetracker__Lat__c, site.sitetracker__Long__c);
+
+                        // Create a marker for the nearby site with yellow color
+                        var marker = L.marker(siteLatLng, {
+                            icon: L.icon({
+                                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-yellow.png',
+                                iconSize: [25, 41],
+                                iconAnchor: [12, 41],
+                                popupAnchor: [1, -34],
+                                tooltipAnchor: [16, -28],
+                                shadowSize: [41, 41]
+                            })
+                        });
+
+                        // Create a popup with a link to the site record page
+                        var popupContent = '<a href="https://cloudextel--cedev.sandbox.lightning.force.com/lightning/r/sitetracker__Site__c/' + site.Id + '/view" target="_blank">' + site.Name + '</a>';
+                        marker.bindPopup(popupContent);
+
+                        // Add the marker to the map
+                        marker.addTo(map);
+
+                        // Increase the index for the next site
+                        siteIndex++;
+
+                        // Call the next markSite after a time interval (e.g., 1000 milliseconds)
+                        setTimeout(markSite, 1000);
+                    }
+                }
+         function markOption() 
+                {
+                    optionindex=0;
+                    if (optionindex < optjsonObject.length) 
+                    {
+                        var site = optjsonObject[optionindex];
+                        var siteLatLng = L.latLng(site.sitetracker__Lat__c, site.sitetracker__Long__c);
+
+                        // Create a marker for the nearby site with yellow color
+                        var marker = L.marker(siteLatLng, {
+                            icon: L.icon({
+                                iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-red.png',
+                                iconSize: [25, 41],
+                                iconAnchor: [12, 41],
+                                popupAnchor: [1, -34],
+                                tooltipAnchor: [16, -28],
+                                shadowSize: [41, 41]
+                            })
+                        });
+
+                        // Create a popup with a link to the site record page
+                        var popupContent = '<a href="https://cloudextel--cedev.sandbox.lightning.force.com/lightning/r/sitetracker__Candidate__c/' + site.Id + '/view" target="_blank">' + site.Name + '</a>';
+                        marker.bindPopup(popupContent);
+
+                        // Add the marker to the map
+                        marker.addTo(map);
+
+                        // Increase the index for the next site
+                        optionindex++;
+
+                        // Call the next markSite after a time interval (e.g., 1000 milliseconds)
+                        setTimeout(markSite, 1000);
+                    }
+                }
+                // Start marking the sites
+                markSite();
+                markOption() ;
+            }
+         </script>
+          <style>
+                .circle-label {
+                    color: white; /* Set the text color to white */
+                    font-weight: bold;
+                }
+            </style>
+      </body>
+   </html>
+</apex:page>

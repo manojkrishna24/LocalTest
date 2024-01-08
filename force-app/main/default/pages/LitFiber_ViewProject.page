@@ -1,0 +1,3 @@
+<apex:page action="{!URLFOR($Action.sitetracker__Project__c.View,Lit_Fiber__c.Project__r.Id)}" standardController="Lit_Fiber__c">
+            <apex:outputField value="{!Lit_Fiber__c.Project__r.Id}"/>
+        </apex:page>

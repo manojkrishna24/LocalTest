@@ -1,0 +1,17 @@
+<template>
+    <lightning-card title="Geolocation Information" icon-name="custom:custom63">
+        <template if:true={latitude}>
+            <div class="slds-m-around_medium">
+                <p><b>Latitude:</b> {latitude}</p>
+                <p><b>Longitude:</b> {longitude}</p>
+                <p><b>Altitude:</b> {altitude}</p>
+                <p><b>Accuracy:</b> {accuracy} meters</p>
+                <p><b>Altitude Accuracy:</b> {altitudeAccuracy} meters</p>
+            </div>
+        </template>
+        <template if:true={error}>
+            <p class="slds-m-around_medium">Error: {error}</p>
+        </template>
+        <lightning-button label="Get Current Location" title="Get Current Location" onclick={getLocation} class="slds-m-left_x-small"></lightning-button>
+    </lightning-card>
+</template>

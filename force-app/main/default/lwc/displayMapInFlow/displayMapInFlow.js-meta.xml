@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>58.0</apiVersion>
+    <isExposed>true</isExposed>
+    <masterLabel>Display Map In Flow</masterLabel>
+    <targets>
+        <target>lightning__RecordPage</target>
+        <target>lightning__AppPage</target>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+        <targetConfig targets="lightning__FlowScreen">
+            <property name="zoomLevel" 
+                type="string" 
+                label="Enter zoom level of map"
+                description="Enter zoom level of map"/>   
+            <property name="sfdcRecordId" 
+                type="string" 
+                label="Pass record Id"
+                description="Pass record Id"/>                   
+        </targetConfig>
+        <targetConfig targets="lightning__AppPage">
+            <property name="zoomLevel" 
+                type="string" 
+                label="Enter zoom level of map"
+                description="Enter zoom level of map"/>   
+            <property name="sfdcRecordId" 
+                type="string" 
+                label="Pass record Id"
+                description="Pass record Id"/>                   
+        </targetConfig>
+    </targetConfigs>  
+</LightningComponentBundle>

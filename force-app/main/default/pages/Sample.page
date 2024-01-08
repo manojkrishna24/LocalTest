@@ -1,0 +1,15 @@
+<apex:page controller="Generating_SP_as_Pdf">
+	<apex:form >
+        <style>
+		.sample {
+		    font-weight: bold;
+            font-size:15px;
+		}
+		</style>
+        <apex:outputpanel styleClass="sample" > 
+        <apex:outputText style="font-size:15px">Click Generate to generate SP</apex:outputText><br/><br/>
+    	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<apex:commandButton value="Generate" rerender="one" action="{!generate_pdf}"/>
+     
+        </apex:outputpanel>
+    </apex:form>
+</apex:page>

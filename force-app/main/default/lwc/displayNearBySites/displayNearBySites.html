@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Near By Sites List">
+        <div class="slds-m-around_medium">
+            <!-- Conditionally render the datatable -->
+            <template if:true={showDatatable}>
+                <lightning-datatable
+                    key-field="Id"
+                    data={filteredSites}
+                    columns={columns}
+                    hide-checkbox-column="true">
+                </lightning-datatable>
+            </template>
+            <!-- Display a message if filteredSites is empty -->
+            <template if:false={showDatatable}>
+                No nearby sites found.
+            </template>
+        </div>
+    </lightning-card>
+</template>

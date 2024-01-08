@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tech_Telecom_Circle__c</fullName>
+    <externalId>false</externalId>
+    <label>Telecom Circle</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>AP and Telanga</fullName>
+                <default>false</default>
+                <label>AP and Telanga</label>
+            </value>
+            <value>
+                <fullName>Assam and North East</fullName>
+                <default>false</default>
+                <label>Assam and North East</label>
+            </value>
+            <value>
+                <fullName>Bihar and Jharkhand</fullName>
+                <default>false</default>
+                <label>Bihar and Jharkhand</label>
+            </value>
+            <value>
+                <fullName>Delhi and NCR</fullName>
+                <default>false</default>
+                <label>Delhi and NCR</label>
+            </value>
+            <value>
+                <fullName>Gujarat and D&amp;D</fullName>
+                <default>false</default>
+                <label>Gujarat and D&amp;D</label>
+            </value>
+            <value>
+                <fullName>HPHP</fullName>
+                <default>false</default>
+                <label>HPHP</label>
+            </value>
+            <value>
+                <fullName>J&amp;K</fullName>
+                <default>false</default>
+                <label>J&amp;K</label>
+            </value>
+            <value>
+                <fullName>Karnataka</fullName>
+                <default>false</default>
+                <label>Karnataka</label>
+            </value>
+            <value>
+                <fullName>Kolkata and Rest of West - Bengal</fullName>
+                <default>false</default>
+                <label>Kolkata and Rest of West - Bengal</label>
+            </value>
+            <value>
+                <fullName>M&amp;G</fullName>
+                <default>false</default>
+                <label>M&amp;G</label>
+            </value>
+            <value>
+                <fullName>MPCG</fullName>
+                <default>false</default>
+                <label>MPCG</label>
+            </value>
+            <value>
+                <fullName>Mumbai</fullName>
+                <default>false</default>
+                <label>Mumbai</label>
+            </value>
+            <value>
+                <fullName>Odisha</fullName>
+                <default>false</default>
+                <label>Odisha</label>
+            </value>
+            <value>
+                <fullName>Rajasthan</fullName>
+                <default>false</default>
+                <label>Rajasthan</label>
+            </value>
+            <value>
+                <fullName>Tamilnadu and Kerala</fullName>
+                <default>false</default>
+                <label>Tamilnadu and Kerala</label>
+            </value>
+            <value>
+                <fullName>UP East</fullName>
+                <default>false</default>
+                <label>UP East</label>
+            </value>
+            <value>
+                <fullName>UP West</fullName>
+                <default>false</default>
+                <label>UP West</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,17 @@
+<apex:page standardController="Site_Proposal__c" extensions="Selected_Records_Pdf_Controller"  recordSetVar="Site_Proposal" renderAs="pdf">
+
+         <table border="1">
+        <tr>
+            <th colspan="2">CloudExtel Site Proposal-Mumbai</th>
+        </tr>
+         <tr>
+            <th>Particulars</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Data 1</td>
+            <td>Data 2</td>
+        </tr>
+    </table>
+   
+</apex:page>

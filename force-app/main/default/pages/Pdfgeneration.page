@@ -1,0 +1,106 @@
+<apex:page controller="MRF_Pdf"
+    showHeader="false"
+    sidebar="false"
+    standardStylesheets="false"
+    renderAs="pdf"
+    applyBodyTag="false"
+    >
+    <html>
+        <head>
+            <style type="text/css" media="print">
+                @page {
+                    margin-bottom: 3cm;
+                    @bottom-center {
+                        content: element(footer);
+                    }
+                }
+
+                div.footer {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    padding: 10px;
+                    position: running(footer);
+                text-align: center; 
+                }
+
+                div.footer p {
+                    margin: 0;
+                }
+
+                .left-content {
+                    text-align: left; 
+                }
+
+                .center-content {
+                    text-align: center; 
+                }
+
+                .right-content {
+                    text-align: right;
+                }
+
+                div.header {
+                    background-color: #001f3f; /* Dark blue color for header */
+                    color: #ffffff; /* White text color for header */
+                    padding: 25px;
+                    text-align: right;
+                    font-size : 12px;
+                     /* Remove margin to cover full width */
+                    line-height: 0.4;
+                }
+
+                div.content {
+                    padding: 10px;
+                    text-align: center; /* Center align the content in the body */
+                }
+            </style>
+        </head>
+        <body>
+            <div class="header">
+                <!-- Your header content -->
+                <p>Excel Telesonic India Private Limited</p>
+                <p>The Ruby, 11th Floor, AWFIS, Dadar (West),</p>
+                <p>Mumbai, Maharashtra - 400028</p>
+                <p>Official No: +91 98671 51303</p>
+                <p>CIN No: U74999MH2010PTC207323</p>
+            </div>
+
+
+            <div class="content">
+                <apex:variable var="materialRequestId" value="{!$CurrentPage.parameters.recordId}" />
+                <apex:param name="recordIdParam" value="{!materialRequestId}" assignTo="{!MRF_Pdf}" />
+
+                <apex:pageBlock >
+                    <apex:pageBlockTable value="{!MaterialRequest}" var="result" border="1" cellpadding="5" styleClass="yellow-border">
+                        <apex:column value="{!result.Name}" />
+                        <apex:column value="{!result.Project__r.sitetracker__Site__r.Name}" />
+                        <apex:column value="{!result.Project__r.sitetracker__Site__r.sitetracker__Full_Address__c}" />
+                        <apex:column value="{!result.Project__r.Name}" />
+                        <apex:column value="{!result.Warehouse__r.Name}" />
+                        <apex:column value="{!result.Account__r.Name}" />
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+                <br />
+                <br />
+
+                <apex:pageBlock >
+                    <apex:pageBlockTable value="{!MaterialRequestItem}" var="resitem" border="1" cellpadding="5" styleClass="yellow-border">
+                        <apex:column value="{!resitem.Item__c}" />
+                        <apex:column value="{!resitem.Quantity__c}" />
+                    </apex:pageBlockTable>
+                </apex:pageBlock>
+            </div>
+
+            <div class="footer" name="footer">
+                <hr>
+                <p>
+        +91 9867151303 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        accounts@cloudextel.com &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        www.cloudextel.com
+    </p>
+                
+            </div>
+        </body>
+    </html>
+</apex:page>
