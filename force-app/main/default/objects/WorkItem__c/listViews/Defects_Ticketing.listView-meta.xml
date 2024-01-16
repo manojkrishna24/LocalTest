@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defects_Ticketing</fullName>
+    <columns>WorkItemId__c</columns>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Status__c</columns>
+    <columns>Priority__c</columns>
+    <columns>AssignedTo__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>WorkItem__c.Defect</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>Case</value>
+    </filters>
+    <label>Defects Ticketing</label>
+</ListView>

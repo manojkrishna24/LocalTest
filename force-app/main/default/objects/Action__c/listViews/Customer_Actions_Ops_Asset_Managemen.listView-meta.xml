@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Actions_Ops_Asset_Managemen</fullName>
+    <booleanFilter>1 AND (2 OR 3 OR 4)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>ActionType__c</columns>
+    <columns>Description__c</columns>
+    <columns>CloudExtel_Owner__c</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>Status__c</columns>
+    <columns>DueDate__c</columns>
+    <columns>ProjectSP__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open,On Hold,In Progress</value>
+    </filters>
+    <filters>
+        <field>AssignedTo__c</field>
+        <operation>equals</operation>
+        <value>Viral Shah</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>equals</operation>
+        <value>Punita Sharma</value>
+    </filters>
+    <filters>
+        <field>AssignedTo__c</field>
+        <operation>equals</operation>
+        <value>Priya Poojary</value>
+    </filters>
+    <label>CE Actions - Ops &amp; AssetManagement</label>
+</ListView>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TestingOrg__c</fullName>
+    <externalId>false</externalId>
+    <label>Testing Org</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>DEV</fullName>
+                <default>true</default>
+                <label>DEV</label>
+            </value>
+            <value>
+                <fullName>SIT</fullName>
+                <default>false</default>
+                <label>SIT</label>
+            </value>
+            <value>
+                <fullName>UAT</fullName>
+                <default>false</default>
+                <label>UAT</label>
+            </value>
+            <value>
+                <fullName>PPD</fullName>
+                <default>false</default>
+                <label>PPD</label>
+            </value>
+            <value>
+                <fullName>PROD</fullName>
+                <default>false</default>
+                <label>PROD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

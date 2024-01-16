@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FieldEngineer__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Field Engineer who is responsible for maintenance/issue fix of this GPON</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Field Engineer who is responsible for maintenance/issue fix of this GPON</inlineHelpText>
+    <label>Field Engineer</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>GPONs</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

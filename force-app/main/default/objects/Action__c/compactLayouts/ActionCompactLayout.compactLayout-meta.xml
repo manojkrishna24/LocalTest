@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ActionCompactLayout</fullName>
+    <fields>Id__c</fields>
+    <fields>ProjectSP__c</fields>
+    <fields>Capability__c</fields>
+    <fields>AssignedTo__c</fields>
+    <fields>Status__c</fields>
+    <label>Action Compact Layout</label>
+</CompactLayout>

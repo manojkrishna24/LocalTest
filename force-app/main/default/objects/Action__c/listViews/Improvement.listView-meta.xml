@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Improvement</fullName>
+    <columns>Id__c</columns>
+    <columns>Improvement_Type__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>Capability__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ProjectSP__c</field>
+        <operation>equals</operation>
+        <value>Ops &amp; Asset Management</value>
+    </filters>
+    <filters>
+        <field>ActionType__c</field>
+        <operation>equals</operation>
+        <value>Improvement</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <label>Improvement</label>
+</ListView>

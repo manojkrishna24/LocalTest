@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CloudExtel_Kolkatta_GPONs</fullName>
+    <columns>NAME</columns>
+    <columns>GPONId__c</columns>
+    <columns>InstallationAddress__c</columns>
+    <columns>FieldEngineer__c</columns>
+    <columns>RSU__c</columns>
+    <columns>IsMobilityConnected__c</columns>
+    <columns>IsCEMaintenance__c</columns>
+    <columns>Circles__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>IsCEMaintenance__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <filters>
+        <field>Circles__c</field>
+        <operation>equals</operation>
+        <value>Kolkatta</value>
+    </filters>
+    <label>CloudExtel Kolkatta GPONs</label>
+</ListView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_Action_Points</fullName>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>Type__c</columns>
+    <columns>ProjectSP__c</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>DueDate__c</columns>
+    <columns>Status__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>Integration</value>
+    </filters>
+    <label>Integration Action Points</label>
+</ListView>

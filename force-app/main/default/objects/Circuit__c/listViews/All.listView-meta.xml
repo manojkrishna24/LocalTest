@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Circle__c</columns>
+    <columns>CircuitId__c</columns>
+    <columns>CustomerCircuitId__c</columns>
+    <columns>LinkName__c</columns>
+    <columns>LOB__c</columns>
+    <columns>NOCContactEmail__c</columns>
+    <columns>OMContactEmail__c</columns>
+    <columns>OWNER.ALIAS</columns>
+    <columns>OBJECT_ID</columns>
+    <columns>RouteName__c</columns>
+    <columns>SiteAAddress__c</columns>
+    <columns>SiteALatitude__c</columns>
+    <columns>SiteALongitude__c</columns>
+    <columns>FieldEngineer__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All</label>
+</ListView>

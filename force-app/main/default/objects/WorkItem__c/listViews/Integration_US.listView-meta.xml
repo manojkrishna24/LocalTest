@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Integration_US</fullName>
+    <columns>WorkItemId__c</columns>
+    <columns>NAME</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>Topic_CE__c</columns>
+    <columns>Status__c</columns>
+    <columns>TargetRelease__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Capability__c</field>
+        <operation>equals</operation>
+        <value>Integration</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Cancelled</value>
+    </filters>
+    <label>Integration - US</label>
+</ListView>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <color>#FF9966</color>
+                <default>false</default>
+                <label>In Progress</label>
+            </value>
+            <value>
+                <fullName>Completed</fullName>
+                <color>#33CC00</color>
+                <default>false</default>
+                <label>Completed</label>
+            </value>
+            <value>
+                <fullName>Failed</fullName>
+                <color>#FF0000</color>
+                <default>false</default>
+                <label>Failed</label>
+            </value>
+            <value>
+                <fullName>File Not Found</fullName>
+                <default>false</default>
+                <label>File Not Found</label>
+            </value>
+            <value>
+                <fullName>Partially Completed</fullName>
+                <default>false</default>
+                <label>Partially Completed</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

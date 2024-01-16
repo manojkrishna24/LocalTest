@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UserStory</fullName>
+    <columns>RECORDTYPE</columns>
+    <columns>Number__c</columns>
+    <columns>Capability__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>TargetRelease__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>WorkItem__c.UserStory</value>
+    </filters>
+    <label>User Stories</label>
+</ListView>

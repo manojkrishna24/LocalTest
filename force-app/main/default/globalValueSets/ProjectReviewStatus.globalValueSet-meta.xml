@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>OnTrack</fullName>
+        <default>true</default>
+        <label>🟩 On Track</label>
+    </customValue>
+    <customValue>
+        <fullName>AtRisk</fullName>
+        <default>false</default>
+        <label>🟧 At Risk</label>
+    </customValue>
+    <customValue>
+        <fullName>OffTrack</fullName>
+        <default>false</default>
+        <label>🟥 Off Track</label>
+    </customValue>
+    <masterLabel>Project Review Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

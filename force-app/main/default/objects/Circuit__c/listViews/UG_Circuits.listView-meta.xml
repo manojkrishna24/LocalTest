@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UG_Circuits</fullName>
+    <columns>NAME</columns>
+    <columns>CircuitId__c</columns>
+    <columns>RouteName__c</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>LOB__c</field>
+        <operation>equals</operation>
+        <value>UG</value>
+    </filters>
+    <label>UG Circuits</label>
+</ListView>

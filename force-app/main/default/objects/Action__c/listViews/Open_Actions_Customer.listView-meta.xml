@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Open_Actions_Customer</fullName>
+    <columns>NAME</columns>
+    <columns>Capability__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>AssignedTo__c</field>
+        <operation>contains</operation>
+        <value>Viral</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open,On Hold,In Progress</value>
+    </filters>
+    <label>Open Actions - Customer</label>
+</ListView>

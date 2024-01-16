@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Line_of_Business__c</fullName>
+    <externalId>false</externalId>
+    <label>Line of Business</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Small Cell</fullName>
+                <default>false</default>
+                <label>Small Cell</label>
+            </value>
+            <value>
+                <fullName>FTTH</fullName>
+                <default>false</default>
+                <label>FTTH</label>
+            </value>
+            <value>
+                <fullName>OHFC</fullName>
+                <default>false</default>
+                <label>OHFC</label>
+            </value>
+            <value>
+                <fullName>UG</fullName>
+                <default>false</default>
+                <label>UG</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>Service Case</name>
+    <queueMembers>
+        <users>
+            <user>s.lotankar@ce-st.com</user>
+            <user>noc.user1@ce-st.com</user>
+            <user>noc.user2@ce-st.com</user>
+            <user>noc.user3@ce-st.com</user>
+            <user>integration.user@ce-st.com</user>
+        </users>
+    </queueMembers>
+    <queueRoutingConfig>Service_Routing_Cases</queueRoutingConfig>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

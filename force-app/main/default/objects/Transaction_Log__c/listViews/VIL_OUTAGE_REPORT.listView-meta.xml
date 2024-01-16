@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>VIL_OUTAGE_REPORT</fullName>
+    <columns>NAME</columns>
+    <columns>Interface_Name__c</columns>
+    <columns>Source_Identifier__c</columns>
+    <columns>Status__c</columns>
+    <columns>Success_Rate__c</columns>
+    <columns>Details__c</columns>
+    <columns>Start_Time__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>Target_Identifier__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Completed,Failed</value>
+    </filters>
+    <filters>
+        <field>Interface_Name__c</field>
+        <operation>equals</operation>
+        <value>VIL_OUTAGE_CLOSURE</value>
+    </filters>
+    <label>VIL OUTAGE REPORT</label>
+</ListView>

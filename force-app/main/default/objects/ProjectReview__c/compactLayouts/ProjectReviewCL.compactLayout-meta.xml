@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ProjectReviewCL</fullName>
+    <fields>Project__c</fields>
+    <fields>ProjectReviewDate__c</fields>
+    <fields>OverallStatus__c</fields>
+    <fields>Scope__c</fields>
+    <fields>Planning__c</fields>
+    <fields>Resources__c</fields>
+    <fields>Budget__c</fields>
+    <label>ProjectReviewCL</label>
+</CompactLayout>

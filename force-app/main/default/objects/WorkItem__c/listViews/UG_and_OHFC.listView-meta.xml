@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UG_and_OHFC</fullName>
+    <booleanFilter>1 AND 2 AND (3 OR 4)</booleanFilter>
+    <columns>NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>CE_User_Story_ID__c</field>
+        <operation>contains</operation>
+        <value>ST</value>
+    </filters>
+    <filters>
+        <field>TargetRelease__c</field>
+        <operation>notContain</operation>
+        <value>Ticketing</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>UG</value>
+    </filters>
+    <filters>
+        <field>NAME</field>
+        <operation>contains</operation>
+        <value>OHFC</value>
+    </filters>
+    <label>UG and OHFC</label>
+</ListView>

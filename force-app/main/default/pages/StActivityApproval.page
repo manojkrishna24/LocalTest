@@ -1,0 +1,19 @@
+<apex:page standardController="sitetracker__Activity__c">
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"> </script>
+    <apex:includeLightning />
+    <script>
+    var $j = jQuery.noConflict();
+        $Lightning.use("stdraw:ApprovalProcessApp", function() {
+        $Lightning.createComponent("stdraw:Approval_Steps_Component",
+            {
+                recordId: "{!sitetracker__Activity__c.Id}",
+                approvalProcessId: "{!sitetracker__Activity__c.Approval_Process__c}"
+            },
+            "StepsComponentContainer",
+            function(cmp) {
+                console.log('AP MP');
+            });
+        });
+    </script>
+    <div id="StepsComponentContainer"/>
+</apex:page>

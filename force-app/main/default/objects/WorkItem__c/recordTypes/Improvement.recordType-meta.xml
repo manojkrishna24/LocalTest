@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Improvement</fullName>
+    <active>true</active>
+    <compactLayoutAssignment>ImprovementCL</compactLayoutAssignment>
+    <description>Change in the actual design of the solution.</description>
+    <label>Improvement</label>
+    <picklistValues>
+        <picklist>DetectedEnvironment__c</picklist>
+        <values>
+            <fullName>DEV</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UAT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ImplementationType__c</picklist>
+        <values>
+            <fullName>Appexchange Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Business Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Development</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Page</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dashboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Migration %28Automated%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Migration %28Manual%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interface %28Inbound%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Interface %28Outbound%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Object Configuration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Profile %26 Permission Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Report</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Standard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Workflow %26 Approval</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>Critical</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Nice To Have</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Business Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending with Business</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>TestingOrg__c</picklist>
+        <values>
+            <fullName>DEV</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>PPD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>PROD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SIT</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>UAT</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Topic__c</picklist>
+        <values>
+            <fullName>Accounts %26 contacts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Activity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>CPQ</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data %26 Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Notifications</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Marketing Campaigns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reporting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sharing %26 Visibility</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

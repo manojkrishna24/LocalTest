@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Success_Rate__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF((Success__c / ( Success__c + Failed__c))*100 = 100, &quot;🟢&quot;, IF((Success__c / ( Success__c + Failed__c))*100 &gt; 0, &quot;🟠&quot;, &quot;🔴&quot;)) +&quot; &quot;
++ TEXT( FLOOR(( (Success__c /(Success__c + Failed__c))*100 )) )+ &quot;%&quot;</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Success Rate</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

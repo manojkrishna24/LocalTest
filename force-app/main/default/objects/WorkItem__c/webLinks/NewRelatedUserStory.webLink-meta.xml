@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NewRelatedUserStory</fullName>
+    <availability>online</availability>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <height>600</height>
+    <linkType>url</linkType>
+    <masterLabel>New User Story</masterLabel>
+    <openType>sidebar</openType>
+    <protected>false</protected>
+    <requireRowSelection>true</requireRowSelection>
+    <url>/lightning/o/WorkItem__c/new?recordTypeId=012C70000004LNBIA2&amp;defaultFieldValues=Name=%3CAutomatically+Generated+Upon+Save%3E,ParentUS__c={!WorkItem__c.Id}</url>
+</WebLink>

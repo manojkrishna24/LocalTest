@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ticketing_User_Stories</fullName>
+    <columns>WorkItemId__c</columns>
+    <columns>Capability__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>WorkItem__c.UserStory</value>
+    </filters>
+    <filters>
+        <field>TargetRelease__c</field>
+        <operation>equals</operation>
+        <value>Ticketing_1.0.0</value>
+    </filters>
+    <label>Ticketing - User Stories</label>
+</ListView>

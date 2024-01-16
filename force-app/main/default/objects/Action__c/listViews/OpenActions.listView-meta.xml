@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>OpenActions</fullName>
+    <columns>Id__c</columns>
+    <columns>ProjectSP__c</columns>
+    <columns>NAME</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>DueDateFormula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open</value>
+    </filters>
+    <label>Open Actions</label>
+</ListView>

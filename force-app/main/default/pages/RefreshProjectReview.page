@@ -1,0 +1,7 @@
+<apex:page standardController="ProjectReview__c" extensions="ProjectReviewController" lightningStyleSheets="true">
+
+    <apex:form >
+        <apex:commandButton styleClass="slds-button" action="{!generateProjectReview}" value="Refresh Project Overview" />
+    </apex:form>
+    
+</apex:page>

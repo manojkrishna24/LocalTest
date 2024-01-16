@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Customer_Actions</fullName>
+    <booleanFilter>(1 OR 2) AND 3 AND 4 AND 5</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Capability__c</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>ActionType__c</columns>
+    <columns>Status__c</columns>
+    <columns>DueDate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>AssignedTo__c</field>
+        <operation>equals</operation>
+        <value>Viral Shah</value>
+    </filters>
+    <filters>
+        <field>AssignedTo__c</field>
+        <operation>contains</operation>
+        <value>Punita</value>
+    </filters>
+    <filters>
+        <field>ProjectSP__c</field>
+        <operation>equals</operation>
+        <value>Ops &amp; Asset Management</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open,On Hold,In Progress</value>
+    </filters>
+    <filters>
+        <field>ActionType__c</field>
+        <operation>equals</operation>
+        <value>Feedback</value>
+    </filters>
+    <label>Customer Actions</label>
+</ListView>

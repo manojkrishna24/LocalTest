@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TestCase__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Test Case which is related to this Test Case Execution</description>
+    <externalId>false</externalId>
+    <label>TestCase</label>
+    <referenceTo>TestCase__c</referenceTo>
+    <relationshipLabel>Test Case Executions</relationshipLabel>
+    <relationshipName>Test_Case_Executions</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

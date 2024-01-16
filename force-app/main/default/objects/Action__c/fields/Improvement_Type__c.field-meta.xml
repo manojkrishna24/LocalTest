@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Improvement_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Improvement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>ActionType__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Process_Change</fullName>
+                <default>false</default>
+                <label>Process Change</label>
+            </value>
+            <value>
+                <fullName>UI_Change</fullName>
+                <default>false</default>
+                <label>UI Change</label>
+            </value>
+            <value>
+                <fullName>Automation</fullName>
+                <default>false</default>
+                <label>Automation</label>
+            </value>
+            <value>
+                <fullName>Report</fullName>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Improvement</controllingFieldValue>
+            <valueName>Process_Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Improvement</controllingFieldValue>
+            <valueName>UI_Change</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Improvement</controllingFieldValue>
+            <valueName>Automation</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Improvement</controllingFieldValue>
+            <valueName>Report</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

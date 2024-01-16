@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>InstallationAddress__c</fullName>
+    <description>Installation Address of the GPON (Gigabit Passive Optical Network)</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Installation Address of the GPON (Gigabit Passive Optical Network)</inlineHelpText>
+    <label>Installation Address</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

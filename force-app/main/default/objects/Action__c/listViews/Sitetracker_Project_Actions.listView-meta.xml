@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sitetracker_Project_Actions</fullName>
+    <columns>Id__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>DueDate__c</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>DaysLeft__c</columns>
+    <columns>DueDateFormula__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ProjectSP__c</field>
+        <operation>contains</operation>
+        <value>Sitetracker</value>
+    </filters>
+    <label>Sitetracker Project Actions</label>
+</ListView>

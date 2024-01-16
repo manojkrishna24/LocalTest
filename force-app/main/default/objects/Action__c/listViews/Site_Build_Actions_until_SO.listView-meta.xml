@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Site_Build_Actions_until_SO</fullName>
+    <booleanFilter>1 AND 2 AND 3 AND (4 OR 5 OR 6 OR 7 OR 8 OR 9)</booleanFilter>
+    <columns>NAME</columns>
+    <columns>Description__c</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Status__c</columns>
+    <columns>DueDate__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ProjectSP__c</field>
+        <operation>equals</operation>
+        <value>Ops &amp; Asset Management</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Open,On Hold,In Progress</value>
+    </filters>
+    <filters>
+        <field>ActionType__c</field>
+        <operation>notContain</operation>
+        <value>Product Limitation</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>SmallCell - Business Development &amp; Forecasts</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>SmallCell - Site Build : Acquisition</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>SmallCell - Site Build : Customer SO</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>SmallCell - Site Build : Prerequisite Test</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>Integration</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>equals</operation>
+        <value>SmallCell - SiteBuild : DTA</value>
+    </filters>
+    <label>Site Build Actions until SO</label>
+</ListView>

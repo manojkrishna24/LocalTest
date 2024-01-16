@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Small_Cell_US</fullName>
+    <columns>WorkItemId__c</columns>
+    <columns>NAME</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>Capability__c</columns>
+    <columns>TargetRelease__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>TargetRelease__c</field>
+        <operation>equals</operation>
+        <value>SmallCell_1.0.0</value>
+    </filters>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>WorkItem__c.UserStory</value>
+    </filters>
+    <label>Small Cell - US</label>
+</ListView>

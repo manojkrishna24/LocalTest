@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ops_AssetManagement_Capabilities</fullName>
+    <columns>NAME</columns>
+    <columns>Project__c</columns>
+    <columns>Release__c</columns>
+    <columns>CREATED_DATE</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Project__c</field>
+        <operation>notContain</operation>
+        <value>Ticketing</value>
+    </filters>
+    <label>Ops&amp;AssetManagement Capabilities</label>
+</ListView>

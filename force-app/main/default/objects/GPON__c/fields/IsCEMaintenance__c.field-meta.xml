@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsCEMaintenance__c</fullName>
+    <defaultValue>true</defaultValue>
+    <description>Indicates that if CloudExtel is managing this GPON and FAT. If False it is not with CloudExtel but with the Customer and this field is there to differentiate between missing details and non serviced GPONs in the Case for Service Cloud Ticketing</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicates that if CloudExtel is managing this GPON and FAT. If False it is not with CloudExtel but with the Customer</inlineHelpText>
+    <label>IsCEMaintenance</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

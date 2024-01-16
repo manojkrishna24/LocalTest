@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Actions_Small_Cell</fullName>
+    <columns>Id__c</columns>
+    <columns>NAME</columns>
+    <columns>Status__c</columns>
+    <columns>ActionType__c</columns>
+    <columns>Improvement_Type__c</columns>
+    <columns>DueDate__c</columns>
+    <columns>AssignedTo__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>ActionType__c</field>
+        <operation>equals</operation>
+        <value>Improvement</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Completed,Cancelled</value>
+    </filters>
+    <label>Actions - Small Cell</label>
+</ListView>

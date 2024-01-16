@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IsMobilityConnected__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field indicates if the GPON/FAT is connected to a Mobility Tower in which case the impact will be huge in case of an issue with this GPON/FAT</description>
+    <externalId>false</externalId>
+    <inlineHelpText>This field indicates if the GPON/FAT is connected to a Mobility Tower in which case the impact will be huge in case of an issue with this GPON/FAT</inlineHelpText>
+    <label>Is Mobility Connected</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

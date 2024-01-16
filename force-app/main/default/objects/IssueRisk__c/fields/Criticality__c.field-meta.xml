@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Criticality__c</fullName>
+    <externalId>false</externalId>
+    <label>Criticality</label>
+    <required>true</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Critical</fullName>
+                <color>#000000</color>
+                <default>false</default>
+                <label>⚫️ Critical</label>
+            </value>
+            <value>
+                <fullName>High</fullName>
+                <color>#CC0000</color>
+                <default>true</default>
+                <label>🔴 High</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <color>#FFCC33</color>
+                <default>false</default>
+                <label>🟠 Medium</label>
+            </value>
+            <value>
+                <fullName>Low</fullName>
+                <color>#FFFF66</color>
+                <default>false</default>
+                <label>🟡 Low</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

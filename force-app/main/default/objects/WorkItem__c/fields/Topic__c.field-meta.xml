@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Topic__c</fullName>
+    <externalId>false</externalId>
+    <label>Topic</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+                <label>Lead Management</label>
+            </value>
+            <value>
+                <fullName>Accounts &amp; contacts</fullName>
+                <default>false</default>
+                <label>Accounts &amp; contacts</label>
+            </value>
+            <value>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+                <label>Opportunity Management</label>
+            </value>
+            <value>
+                <fullName>CPQ</fullName>
+                <default>false</default>
+                <label>CPQ</label>
+            </value>
+            <value>
+                <fullName>Activity Management</fullName>
+                <default>false</default>
+                <label>Activity Management</label>
+            </value>
+            <value>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+                <label>Case Management</label>
+            </value>
+            <value>
+                <fullName>Marketing Campaigns</fullName>
+                <default>false</default>
+                <label>Marketing Campaigns</label>
+            </value>
+            <value>
+                <fullName>Reporting</fullName>
+                <default>false</default>
+                <label>Reporting</label>
+            </value>
+            <value>
+                <fullName>Email Notifications</fullName>
+                <default>false</default>
+                <label>Email Notifications</label>
+            </value>
+            <value>
+                <fullName>Sharing &amp; Visibility</fullName>
+                <default>false</default>
+                <label>Sharing &amp; Visibility</label>
+            </value>
+            <value>
+                <fullName>Data &amp; Reporting</fullName>
+                <default>false</default>
+                <label>Data &amp; Reporting</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

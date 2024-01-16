@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>FTTH_W7</fullName>
+    <columns>NAME</columns>
+    <columns>AssignedTo__c</columns>
+    <columns>Status__c</columns>
+    <columns>DueDateFormula__c</columns>
+    <columns>Capability__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>FTTH</value>
+    </filters>
+    <label>FTTH - W7</label>
+</ListView>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>false</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Draft</fullName>
+                <default>false</default>
+                <label>Draft</label>
+            </value>
+            <value>
+                <fullName>Pending with Business</fullName>
+                <default>false</default>
+                <label>Pending with Business</label>
+            </value>
+            <value>
+                <fullName>Business Approved</fullName>
+                <default>false</default>
+                <label>Business Approved</label>
+            </value>
+            <value>
+                <fullName>Design In Progress</fullName>
+                <default>false</default>
+                <label>Design In Progress</label>
+            </value>
+            <value>
+                <fullName>Design Complete</fullName>
+                <default>false</default>
+                <label>Design Complete</label>
+            </value>
+            <value>
+                <fullName>Build In Progress</fullName>
+                <default>false</default>
+                <label>Build In Progress</label>
+            </value>
+            <value>
+                <fullName>Ready For Build Review</fullName>
+                <default>false</default>
+                <label>Ready For Build Review</label>
+            </value>
+            <value>
+                <fullName>Build Complete</fullName>
+                <default>false</default>
+                <label>Build Complete</label>
+            </value>
+            <value>
+                <fullName>Ready For SIT</fullName>
+                <default>false</default>
+                <label>Ready For SIT</label>
+            </value>
+            <value>
+                <fullName>SIT Complete</fullName>
+                <default>false</default>
+                <label>SIT Complete</label>
+            </value>
+            <value>
+                <fullName>Ready For UAT</fullName>
+                <default>false</default>
+                <label>Ready For UAT</label>
+            </value>
+            <value>
+                <fullName>Validated</fullName>
+                <default>false</default>
+                <label>Validated</label>
+            </value>
+            <value>
+                <fullName>UAT Complete</fullName>
+                <default>false</default>
+                <label>UAT Complete</label>
+            </value>
+            <value>
+                <fullName>Pushed To Production</fullName>
+                <default>false</default>
+                <label>Pushed To Production</label>
+            </value>
+            <value>
+                <fullName>Cancelled</fullName>
+                <default>false</default>
+                <label>Cancelled</label>
+            </value>
+            <value>
+                <fullName>Closed</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>✅ Closed</label>
+            </value>
+            <value>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>🔄 In Progress</label>
+            </value>
+            <value>
+                <fullName>Ready For Test</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>🟨 Ready For Test</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>PrerequisitetUS__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Prerequisite</label>
+    <lookupFilter>
+        <active>true</active>
+        <filterItems>
+            <field>WorkItem__c.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>User Story</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>WorkItem__c</referenceTo>
+    <relationshipLabel>Dependent US</relationshipLabel>
+    <relationshipName>DependentUS</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>
